@@ -129,7 +129,7 @@ describe ('application logic', () => {
 				}),
 				entries: List()
 			});
-			
+				
 			const nextState = vote(state, 'Trainspotting');
 			expect(nextState).to.equal(Map({
 				vote: Map({
