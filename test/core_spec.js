@@ -2,13 +2,11 @@ import { List, Map } from 'immutable';
 import { expect } from 'chai';
 import { setEntries, next, vote } from '../src/core';
 
-import { setEntries } from '../src/core';
-
 describe ('application logic', () => {
 
 	describe ('setEntries', () => {
 
-		it ('adds the entries to the state' () => {
+		it ('adds the entries to the state', () => {
 
 			const state = Map();
 			const entries = List.of('Trainspotting', '28 Days Later');
@@ -43,7 +41,7 @@ describe ('application logic', () => {
 				vote: Map({
 					pair: List.of('Trainspotting', '28 Days Later')
 				}),
-				entries: List.of('Sunshine');
+				entries: List.of('Sunshine')
 			}));
 		});
 
@@ -102,7 +100,7 @@ describe ('application logic', () => {
 						'28 Days Later': 2
 					})
 				}),
-				entries: List();
+				entries: List()
 			});
 
 			const nextState = next(state);
