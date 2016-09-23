@@ -12,6 +12,7 @@ export default function startServer(store) {
 	// emits event to update new client state with state of server
 	io.on('connection', (socket) => {
 		socket.emit('state', store.getState().toJS());
-	})
+		socket.on('action', store.dispatch.bind(store));
+	});
 
 }
